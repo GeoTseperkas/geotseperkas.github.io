@@ -45,7 +45,7 @@ document.addEventListener('visibilitychange',
             $("#favicon").attr("href", "assets/images/favicon.png");
         }
         else {
-            document.title = "My Porfolio";
+            document.title = "My Portfolio";
             $("#favicon").attr("href", "assets/images/favicon.png");
         }
     });
