@@ -116,7 +116,7 @@ export const projects: Project[] = [
     githubUrl: 'https://syntexniafm.gr/',
   },
   {
-    id: 'proj-1',
+    id: 'proj-1b',
     title: 'geotseperkas.github.io',
     description:
       'A modern, minimalist digital portfolio and project showcase. Always learning, continually evolving.',
@@ -242,9 +242,9 @@ export const experience: Experience[] = [
 ];
 
 export const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Education', href: '#education' },
+  { label: 'About', path: '/about' },
+  { label: 'Skills', path: '/skills' },
+  { label: 'Projects', path: '/projects' },
+  { label: 'Experience', path: '/experience' },
+  { label: 'Education', path: '/education' },
 ];

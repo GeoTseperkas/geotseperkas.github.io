@@ -1,27 +1,23 @@
-import Navbar from './components/Navbar/Navbar';
-import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Skills from './components/Skills/Skills';
-import Projects from './components/Projects/Projects';
-import Experience from './components/Experience/Experience';
-import Education from './components/Education/Education';
-import Footer from './components/Footer/Footer';
-import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import { Routes, Route } from 'react-router-dom';
+import MainLayout from './components/layout/MainLayout';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import SkillsPage from './pages/SkillsPage';
+import ProjectsPage from './pages/ProjectsPage';
+import ExperiencePage from './pages/ExperiencePage';
+import EducationPage from './pages/EducationPage';
 
 export default function App() {
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Education />
-      </main>
-      <Footer />
-      <ScrollToTop />
-    </>
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/skills" element={<SkillsPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/experience" element={<ExperiencePage />} />
+        <Route path="/education" element={<EducationPage />} />
+      </Route>
+    </Routes>
   );
 }
