@@ -22,12 +22,16 @@ export interface Education {
   status: string;
 }
 
+export interface Role {
+  title: string;
+  period: string;
+  description?: string;
+}
+
 export interface Experience {
   id: string;
   company: string;
-  role: string;
-  period: string;
-  description?: string;
+  roles: Role[];
 }
 
 /* ─── Content Data ─── */
@@ -55,15 +59,28 @@ export const aboutText = [
 export const skills: Skill[] = [
   {
     category: 'Languages',
-    items: ['Java', 'Python', 'C#', 'JavaScript', 'HTML', 'CSS', 'SQL'],
+    items: ['Java', 'TypeScript', 'JavaScript', 'Python', 'C#', 'SQL'],
+  },
+  {
+    category: 'Frameworks & Libraries',
+    items: [
+      'Oracle ADF',
+      'React',
+      'Redux',
+      'Node.js',
+      'Express',
+      'Prisma',
+      'Material UI',
+      'Vite',
+    ],
   },
   {
     category: 'Databases',
-    items: ['MySQL', 'SQL Server', 'PostgreSQL'],
+    items: ['MySQL', 'Oracle', 'PostgreSQL', 'MS SQL'],
   },
   {
     category: 'Tools & Platforms',
-    items: ['Git', 'GitHub', 'GitLab', 'Bootstrap', 'Figma'],
+    items: ['Git', 'GitHub', 'GitLab', 'Jira', 'Figma', 'Confluence'],
   },
   {
     category: 'Data & Analytics',
@@ -112,7 +129,7 @@ export const projects: Project[] = [
     title: 'SYNTEXNIA.FM',
     description:
       'Full-stack digital transmission platform merging live web radio with a multimedia art repository.',
-    tags: ['React', 'Full Stack', 'SQL'],
+    tags: ['React', 'TypeScript', 'Redux', 'Express', 'Prisma', 'SQL'],
     githubUrl: 'https://syntexniafm.gr/',
   },
   {
@@ -120,7 +137,7 @@ export const projects: Project[] = [
     title: 'geotseperkas.github.io',
     description:
       'A modern, minimalist digital portfolio and project showcase. Always learning, continually evolving.',
-    tags: ['React', 'TypeScript', 'Vite'],
+    tags: ['React', 'TypeScript', 'Vite', 'MUI'],
     githubUrl: 'https://github.com/geotseperkas/geotseperkas.github.io',
   },
   {
@@ -128,7 +145,7 @@ export const projects: Project[] = [
     title: 'SEV AUEB/Skills4Jobs — Final Project',
     description:
       'Full workflow simulation of a Junior Full Stack Developer, built as the capstone project for the SEV/AUEB Skills4Jobs bootcamp.',
-    tags: ['Java', 'Full Stack', 'SQL'],
+    tags: ['C#', 'Full Stack', 'SQL'],
     githubUrl:
       'https://github.com/GeoTseperkas/SEV_AUEB-Skills4Jobs-Final_Project',
   },
@@ -137,7 +154,7 @@ export const projects: Project[] = [
     title: 'Python Data Science Projects',
     description:
       'A collection of data science projects demonstrating the use of Python and its libraries for data analysis and visualization.',
-    tags: ['Python', 'Data Science', 'Pandas'],
+    tags: ['Python', 'Data Science', 'ML'],
     githubUrl: 'https://github.com/GeoTseperkas/Py-Data-Science-Projects',
   },
   {
@@ -197,47 +214,69 @@ export const experience: Experience[] = [
   {
     id: 'exp-1',
     company: 'Netcompany-Intrasoft',
-    role: 'Software Engineer',
-    period: 'Jul 2025 — Present',
+    roles: [
+      {
+        title: 'Software Engineer',
+        period: 'Jul 2025 — Present',
+      },
+      {
+        title: 'Associate Software Engineer',
+        period: 'Jul 2023 — Jun 2025',
+      },
+    ],
   },
   {
     id: 'exp-2',
-    company: 'Netcompany-Intrasoft',
-    role: 'Associate Software Engineer',
-    period: 'Jul 2023 — Jun 2025',
+    company: 'P.J. Condellis S.A.',
+    roles: [
+      {
+        title: 'Junior ERP Analyst/Developer',
+        period: 'Jan 2023 — Jun 2023',
+      },
+    ],
   },
   {
     id: 'exp-3',
-    company: 'P.J. Condellis S.A.',
-    role: 'Junior ERP Analyst/Developer',
-    period: 'Jan 2023 — Jun 2023',
+    company: 'A D B Financial Consultants E.E.',
+    roles: [
+      {
+        title: 'Junior Data Analyst',
+        period: 'Jul 2022 — Dec 2022',
+        description: '6-month fixed term contract',
+      },
+    ],
   },
   {
     id: 'exp-4',
-    company: 'A D B Financial Consultants E.E.',
-    role: 'Junior Data Analyst',
-    period: 'Jul 2022 — Dec 2022',
-    description: '6-month fixed term contract',
+    company: 'MyServices Supporting Solutions S.A.',
+    roles: [
+      {
+        title: 'Human Resources Assistant',
+        period: 'Oct 2021 — Dec 2022',
+      },
+    ],
   },
   {
     id: 'exp-5',
-    company: 'MyServices Supporting Solutions S.A.',
-    role: 'Human Resources Assistant',
-    period: 'Oct 2021 — Dec 2022',
+    company: 'CQS S.A.',
+    roles: [
+      {
+        title: 'Technical Support Engineer for OPAP S.A.',
+        period: 'Sep 2018 — Sep 2021',
+        description: '2nd level VLT Technical Support — Retail Operations Team',
+      },
+    ],
   },
   {
     id: 'exp-6',
-    company: 'CQS S.A.',
-    role: 'Technical Support Engineer for OPAP S.A.',
-    period: 'Sep 2018 — Sep 2021',
-    description: '2nd level VLT Technical Support — Retail Operations Team',
-  },
-  {
-    id: 'exp-7',
     company: 'E-SHOP.GR',
-    role: 'Intern Technician',
-    period: 'Sep 2012 — Feb 2013',
-    description: 'Internship',
+    roles: [
+      {
+        title: 'Intern Technician',
+        period: 'Sep 2012 — Feb 2013',
+        description: 'Internship',
+      },
+    ],
   },
 ];
 

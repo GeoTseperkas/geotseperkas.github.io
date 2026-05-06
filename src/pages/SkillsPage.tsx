@@ -53,7 +53,11 @@ const SkillsPage: React.FC = () => {
             lineHeight: 1.7,
           }}
         >
-          The languages, databases, and tools I work with on a daily basis.
+          My technical toolkit is split into two areas: the core stack I rely on
+          every day to solve complex professional problems, and the wider
+          ecosystem of tools I’ve picked up for weekend projects, hackathons, or
+          one-off experiments. Below is everything I’ve worked with, from my
+          daily drivers to my brief curiosities.
         </Typography>
       </Box>
 
@@ -74,7 +78,7 @@ const SkillsPage: React.FC = () => {
                   borderColor: alpha(theme.palette.secondary.main, 0.3),
                   bgcolor: alpha(
                     theme.palette.secondary.main,
-                    theme.palette.mode === 'dark' ? 0.04 : 0.02
+                    theme.palette.mode === 'dark' ? 0.04 : 0.02,
                   ),
                 },
               }}
